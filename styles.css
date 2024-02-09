@@ -1,0 +1,307 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: #ffffff; /* Cambia el color del texto para que sea legible en el fondo */
+  font-family: 'Roboto', sans-serif;
+}
+/*PRELOADER*/
+#preload-video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* Fondo negro mientras se carga el video */
+  z-index: 9999;
+  display: block; /* Asegura que el contenedor esté visible inicialmente */
+}
+
+#preload-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#main-content {
+  display: none; /* Oculta el contenido principal inicialmente */
+}
+
+
+
+
+/*NAVBAR*/ 
+
+
+/* Estilo para el menú desplegable (hamburguesa) */
+.navbar-toggler {
+  background-color: #f7620c;
+}
+
+.container {
+  margin-bottom: 130px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh; /* Ajusta la altura según tus necesidades */
+}
+/*BIENVENIDA*/ 
+#logo {
+  width: 200px; /* Ajusta el tamaño de la imagen según tus necesidades */
+  opacity: 0;
+  animation: neonBlink 1s infinite alternate;
+}
+
+@keyframes neonBlink {
+  from {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  to {
+    opacity: 0.5;
+    filter: brightness(2);
+  }
+}
+
+.container p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3.0em; /* Ajusta el tamaño del texto según tus necesidades */
+  color: #F7620C; /* Color naranja similar al de la barra de navegación */
+  margin-top: 10px; /* Ajusta el margen superior según sea necesario */
+}
+.container h3 {
+  color: #F7620C;
+}
+
+
+
+
+/*SECCION SERVICIOS */
+/* Estilos para dispositivos de escritorio */
+.section-title {
+  text-align: center;
+}
+
+.section-title h2 {
+  font-weight: bold;
+  color: #F7620C;
+}
+
+.image-grid {
+  background-color: #F7620C;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 20px;
+}
+
+.image-container {
+  text-align: center;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.image-title {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 767px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr); /* Cambia a dos columnas en dispositivos móviles */
+    padding: 10px; /* Reduce el espacio de relleno */
+  }
+
+  .image-title {
+    font-size: 12px; /* Reduce el tamaño de fuente para dispositivos móviles */
+  }
+}
+
+
+/*SECCION NOSOTROS */
+
+.nosotros-section {
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.nosotros-container {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+}
+
+.nosotros-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .nosotros-container {
+      width: 100%;
+      float: none;
+  }
+}
+/* SECCION TECNOLOGIAS */
+h2.titulo-tecnologia {
+  padding-bottom: 3rem ;
+  font-size: 3rem;
+  margin-bottom: 0; /* Elimina el margen inferior del h2 */
+  text-align: center;
+  color: #F7620C;
+  background-color: #1a1a1a;
+  /* Otros estilos si los necesitas */
+}
+
+.technologies-section {
+  background-color: #1A1A1A;
+  color: #F7620C;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.technology-container {
+  text-align: center;
+  cursor: pointer; /* Agrega un cursor indicando que es interactivo */
+}
+
+.technology-container img {
+  width: 100%; /* Hace la imagen más flexible */
+  max-width: 100px; /* Establece un ancho máximo para evitar imágenes muy grandes */
+  height: auto;
+  transition: transform 0.3s ease-in-out; /* Agrega una transición suave al efecto hover */
+}
+
+.technology-container p {
+  font-size: 1.2em; /* Aplica un estilo al párrafo de la tecnología */
+}
+
+.technology-container:hover img {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño de la imagen en hover */
+}
+
+@media screen and (max-width: 767px) {
+  .technology-container p {
+    font-size: 1em;
+  }
+}
+
+
+/* SECCION EMPRENDIMIENTOS */
+.container-empre {
+  font-size: 3rem;
+  background-color: #F7620C;
+  text-align: center;
+  padding: 30px 0; /* Ajusta el espacio superior e inferior */
+}
+
+.section-heading {
+  font-weight: bold;
+  color: black;
+  margin-bottom: 20px; /* Ajusta el espacio entre el título y los logos */
+}
+
+.clients-section {
+  display: flex;
+  justify-content: center; /* Centra los logos en la pantalla */
+  flex-wrap: wrap; /* Permite que los logos se envuelvan en dispositivos pequeños */
+}
+
+.client-logo {
+  margin: 10px; /* Ajusta el espacio entre los logos */
+  width: 200px; /* Ajusta el tamaño según sea necesario */
+  height: 200px; /* Ajusta el tamaño según sea necesario */
+  overflow: hidden;
+}
+
+.client-logo img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.client-logo:hover img {
+  transform: scale(1.2); /* Ajusta la escala según sea necesario */
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 767px) {
+  .client-logo {
+    width: 100%; /* Hace que los logos ocupen el 100% del ancho en dispositivos móviles */
+    max-width: 200px; /* Limita el tamaño máximo en dispositivos móviles */
+  }
+}
+
+
+
+
+/* SECCION FOOTER */
+
+/* Agrega un contenedor adicional para el video */
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Evita que el contenedor de video interrumpa la interacción del usuario */
+  z-index: -1;
+}
+
+/* Establece el video como fondo dentro del contenedor */
+.video-container video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilo para el footer */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative; /* Permite que el contenido del footer esté encima del video */
+  z-index: 1; /* Asegura que el contenido del footer esté encima del video */
+}
+
+.footer-logo img {
+  max-width: 100px; /* Ajusta el tamaño máximo del logo según tu necesidad */
+}
+
+.contact-info a,
+.social-media a {
+  color: #f7620c;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s; /* Agrega transición al cambio de color */
+}
+
+.contact-info a:hover,
+.social-media a:hover {
+  color: #f7620c; /* Cambia el color al hacer hover */
+  text-decoration: none; /* Quita el subrayado al hacer hover */
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
+}
